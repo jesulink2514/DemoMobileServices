@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoMobileServices"
+             x:Class="DemoMobileServices.MainPage">
+
+  <StackLayout>
+    <Label Text="Welcome to Xamarin Forms!"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+    <Editor x:Name="TodoText"></Editor>
+    <Button Text="Add" Clicked="Button_OnClicked"></Button>
+    <ListView x:Name="TodoList">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout>
+              <Label Text="{Binding Text}"></Label>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
