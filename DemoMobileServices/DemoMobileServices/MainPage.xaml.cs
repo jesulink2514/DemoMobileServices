@@ -31,7 +31,7 @@ namespace DemoMobileServices
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            var rnd = new Random(1992).Next();
+            var rnd = new Random(DateTime.Now.Millisecond).Next(1,100);
             if(rnd % 2 == 0) throw new InvalidDataContractException("You have bad luck!");
             if (!string.IsNullOrEmpty(TodoText.Text))
             {
