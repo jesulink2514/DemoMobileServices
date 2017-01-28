@@ -9,7 +9,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center" />
     <Editor x:Name="TodoText"></Editor>
-    <Button Text="Add" Clicked="Button_OnClicked"></Button>
+    <Button AutomationId="button" Text="Add" Clicked="Button_OnClicked"></Button>
     <ListView x:Name="TodoList">
       <ListView.ItemTemplate>
         <DataTemplate>
