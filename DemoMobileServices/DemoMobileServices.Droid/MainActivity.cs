@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Util;
 using Gcm.Client;
+using Microsoft.Azure.Mobile;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json.Linq;
 using Xamarin.Forms;
@@ -41,13 +42,15 @@ namespace DemoMobileServices.Droid
         }
         protected override void OnCreate(Bundle bundle)
         {
+            MobileCenter.Configure("c855a225-0de2-4d38-8ce2-ed6c4ae1dcb3");
+
             instance = this;
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
             CurrentPlatform.Init();
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            Forms.Init(this, bundle);
             LoadApplication(new App());
 
             //Subscribe

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -30,6 +31,8 @@ namespace DemoMobileServices
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
+            var rnd = new Random(1992).Next();
+            if(rnd % 2 == 0) throw new InvalidDataContractException("You have bad luck!");
             if (!string.IsNullOrEmpty(TodoText.Text))
             {
                 var todo = new TodoItem()
