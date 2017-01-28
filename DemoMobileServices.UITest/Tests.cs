@@ -24,7 +24,7 @@ namespace DemoMobileServices.UITest
         [Test]
         public void AppLaunches()
         {
-            app.WaitForElement(a=> a.Id("button"));
+            app.WaitForElement(a=> a.Button("button"));
             app.Screenshot("First screen.");
         }
     }
